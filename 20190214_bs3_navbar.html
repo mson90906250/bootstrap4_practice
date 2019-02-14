@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>bs3 navbar</title>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- fontawsome 第三方icon-->
+	<!-- 用法 貼上<i class="fas fa-drumstick-bite"></i> -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+    	.mr5{
+    		margin-right: 5px;
+    	}
+    </style>
+  </head>
+  <body>
+  	<div class="container">
+  		
+  	</div>
+  	<!-- 因為有用到第三方icon所以請在head裡加上
+  		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+
+	<nav class="navbar navbar-inverse">
+	  <!--container (有固定padding) OR container-fluid (content向外延伸)   -->
+	  <div class="container">
+
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="#"><i class="fas fa-drumstick-bite mr5"></i>燒烤店</a>
+	    </div>
+
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+	      <ul class="nav navbar-nav">
+	        <li ><a href="#"><i class="fas fa-hotel mr5"></i>店家介紹 <span class="sr-only">(current)</span></a></li>
+	        <li class="active"><a href="#"><i class="fab fa-algolia mr5"></i>環境介紹</a></li>
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-cutlery mr5"></span>菜單介紹 <span class="caret"></span></a>
+	          <ul class="dropdown-menu">
+	            <li><a href="#"><span class="glyphicon glyphicon-fire mr5"></span>日式烤肉</a></li>
+	            <li><a href="#"><span class="glyphicon glyphicon-fire mr5"></span>臺式烤肉</a></li>
+	            <li><a href="#"><span class="glyphicon glyphicon-fire mr5"></span>韓式烤肉</a></li>
+	            <li role="separator" class="divider"></li>
+	            <li><a href="#"><span class="glyphicon glyphicon-glass mr5"></span>飲料</a></li>
+	            <li role="separator" class="divider"></li>
+	            <li><a href="#"><span class="glyphicon glyphicon-ice-lolly-tasted mr5"></span>點心</a></li>
+	          </ul>
+	        </li>
+	      </ul>
+		  
+		  <!--表單-->
+		  <!-- navbar-right OR navbar-left 看個人使用 *記住是優先順序以前者為優先 例如:form比下面選項還前面 所以優先被排在最右邊 -->
+	      <form class="navbar-form navbar-right">
+	        <div class="form-group">
+	          <input type="text" class="form-control" placeholder="請輸入相關字">
+	        </div>
+	        <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search mr5"></span>搜尋</button>
+	      </form>
+		  
+		  <!--右邊選單-->
+	      <ul class="nav navbar-nav navbar-right">
+	        <li><a href="#"><i class="fas fa-user-minus mr5"></i>XXX 會員 您好</a></li>
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-star mr5"></span>會員中心 <span class="caret"></span></a>
+	          <ul class="dropdown-menu">
+	            <li><a href="#"><span class="glyphicon glyphicon-user mr5"></span>基本資料</a></li>
+	            <li><a href="#"><span class="glyphicon glyphicon-info-sign mr5"></span>帳號密碼修改</a></li>
+	            <li><a href="#"><span class="glyphicon glyphicon-ok-circle mr5"></span>線上訂位</a></li>
+	            <li role="separator" class="divider"></li>
+	            <li><a href="#"><span class="glyphicon glyphicon-comment mr5"></span>線上客服</a></li>
+	          </ul>
+	        </li>
+	      </ul>
+
+	    </div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+	</nav>
+	<div class="container">
+		<div class="breadcrumb_envi">
+			<ol class="breadcrumb" style="background-color: transparent;">
+				<li><a href="#">首頁</a></li>
+				<li>環境介紹</li>
+			</ol>
+		</div>
+		<div class="row">
+			<div class="col-sm-3">
+				    <div class="thumbnail" style="background-color: #E6C27C">
+				        <div class="pimg">
+				            <img src="http://lorempixel.com/output/cats-q-c-640-480-9.jpg" class="img-responsive" alt="">
+				        </div>
+				        <div class="caption">
+				            <h3>title</h3>
+				            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias blanditiis est nisi. Ratione perspiciatis alias recusandae corrupti voluptates consequuntur natus quas numquam accusantium cupiditate necessitatibus delectus incidunt, aliquam facere nam.</p>
+				            <a href="" class="btn btn-primary">cancel</a>
+				            <a href="" class="btn btn-primary">ok</a>
+				        </div>
+				    </div>
+			</div>
+			<div class="col-sm-3">
+				    <div class="thumbnail" style="background-color: #E6C27C">
+				        <div class="pimg">
+				            <img src="http://lorempixel.com/output/cats-q-c-640-480-9.jpg" class="img-responsive" alt="">
+				        </div>
+				        <div class="caption">
+				            <h3>title</h3>
+				            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias blanditiis est nisi. Ratione perspiciatis alias recusandae corrupti voluptates consequuntur natus quas numquam accusantium cupiditate necessitatibus delectus incidunt, aliquam facere nam.</p>
+				            <a href="" class="btn btn-primary">cancel</a>
+				            <a href="" class="btn btn-primary">ok</a>
+				        </div>
+				    </div>
+			</div>
+			<div class="col-sm-3">
+				    <div class="thumbnail" style="background-color: #E6C27C">
+				        <div class="pimg">
+				            <img src="http://lorempixel.com/output/cats-q-c-640-480-9.jpg" class="img-responsive" alt="">
+				        </div>
+				        <div class="caption">
+				            <h3>title</h3>
+				            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias blanditiis est nisi. Ratione perspiciatis alias recusandae corrupti voluptates consequuntur natus quas numquam accusantium cupiditate necessitatibus delectus incidunt, aliquam facere nam.</p>
+				            <a href="" class="btn btn-primary">cancel</a>
+				            <a href="" class="btn btn-primary">ok</a>
+				        </div>
+				    </div>
+			</div>
+			<div class="col-sm-3">
+				    <div class="thumbnail" style="background-color: #E6C27C">
+				        <div class="pimg">
+				            <img src="http://lorempixel.com/output/cats-q-c-640-480-9.jpg" class="img-responsive" alt="">
+				        </div>
+				        <div class="caption">
+				            <h3>title</h3>
+				            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias blanditiis est nisi. Ratione perspiciatis alias recusandae corrupti voluptates consequuntur natus quas numquam accusantium cupiditate necessitatibus delectus incidunt, aliquam facere nam.</p>
+				            <a href="" class="btn btn-primary">cancel</a>
+				            <a href="" class="btn btn-primary">ok</a>
+				        </div>
+				    </div>
+			</div>
+		</div>
+	</div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </body>
+</html>
