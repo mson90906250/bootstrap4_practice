@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>ABC燒烤店</title>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+    	body{
+    		background-color:#F8ECD2;
+    	}
+    	.navbar-brand{
+    		font-size:45px;
+    		color: #786464;
+    		font-weight: 900;
+    	}
+    	.navbar-nav{
+    		font-size: 20px;
+    		padding-top: 10px;
+    	}
+    	.navbar-nav a{
+    		color:#786464;
+    	}
+    	.navbar-toggle{
+    		background-color: #D5C5C5;
+    	}
+    	.navbar-toggle .icon-bar{
+    		background-color: #251C1C
+    	}
+    	.bg-cover{
+    		background-repeat:no-repeat;
+    		background-position:center center;
+    		background-size:cover;
+    	}
+    	.dropdown-menu li a{
+    		color:#786464;
+    	}
+    	.carousel-caption{
+    		background-color: rgba(66,66,66,0.5);
+    		text-align: left;
+    		padding: 25px;
+    	}
+    	@media screen and (max-width: 500px){
+    		.carousel-caption{
+    			display: none;
+    		}
+    	}
+    	.mr15{
+    		margin-right: 15px;
+    	}
+    	.mt10{
+    		margin-top: 10px;
+    	}
+    	.food-card{
+    		background-color:#FDF8F8;
+    		margin: 0 auto;
+    		border: solid 1px black;
+    		height: 100%;
+    		margin-top: 10px;
+    	}
+
+
+    </style>
+  </head>
+  <body>
+  		<!-- navbar -->
+    	<!-- 因為有用到第三方icon所以請在head裡加上
+      		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+      			
+    	<nav class="navbar">
+    	  <!--container (有固定padding) OR container-fluid (content向外延伸)   -->
+    	  <div class="container-fluid">
+    
+    	    <!-- Brand and toggle get grouped for better mobile display -->
+    	    <div class="navbar-header">
+    	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+    	        <span class="sr-only">Toggle navigation</span>
+    	        <span class="icon-bar"></span>
+    	        <span class="icon-bar"></span>
+    	        <span class="icon-bar"></span>
+    	      </button>
+    	      <a class="navbar-brand" href="#"><i class="fas fa-drumstick-bite mr5"></i>ABC燒烤店</a>
+    	    </div>
+    
+    	    <!-- Collect the nav links, forms, and other content for toggling -->
+    	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    
+    	      <ul class="nav navbar-nav navbar-right">
+    	        <li class="active"><a href="#"><i class="fas fa-hotel mr5"></i>店家介紹 <span class="sr-only">(current)</span></a></li>
+    	        <li><a href="#"><i class="fab fa-algolia mr5"></i>環境介紹</a></li>
+    	        <li class="dropdown">
+    	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-cutlery mr5"></span>菜單介紹 <span class="caret"></span></a>
+    	          <ul class="dropdown-menu">
+    	            <li><a href="#"><span class="glyphicon glyphicon-fire mr5"></span>日式烤肉</a></li>
+    	            <li><a href="#"><span class="glyphicon glyphicon-fire mr5"></span>臺式烤肉</a></li>
+    	            <li><a href="#"><span class="glyphicon glyphicon-fire mr5"></span>韓式烤肉</a></li>
+    	            <li role="separator" class="divider"></li>
+    	            <li><a href="#"><span class="glyphicon glyphicon-glass mr5"></span>飲料</a></li>
+    	            <li role="separator" class="divider"></li>
+    	            <li><a href="#"><span class="glyphicon glyphicon-ice-lolly-tasted mr5"></span>點心</a></li>
+    	          </ul>
+    	        </li>
+    	      </ul>
+    	    </div><!-- /.navbar-collapse -->
+    	  </div><!-- /.container-fluid -->
+    	</nav>
+
+		<!-- banner -->
+    	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+		  <!-- Indicators -->
+		  <ol class="carousel-indicators">
+		    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+		    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+		    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+		  </ol>
+
+		  <!-- Wrapper for slides -->
+		  <div class="carousel-inner" role="listbox">
+		    <div class="item active bg-cover" style="background-image:url(image/food-1440-480-10.jpg);height:300px">
+		      <div class="carousel-caption">
+		      	<h3 class=text-center>Lorem ipsum dolor sit amet.</h3>
+		        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat nesciunt adipisci eum! Officia et tempora ut modi sapiente, cupiditate quod, doloribus laudantium, labore qui at consequuntur accusantium hic reprehenderit inventore?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi tenetur voluptas, ex excepturi quas maiores nemo, perspiciatis odio sit veritatis incidunt dignissimos maxime doloribus! Rerum!
+		      </div>
+		    </div>
+		    <div class="item bg-cover" style="background-image:url(image/food-1440-480-4.jpg);height:300px">
+		      <div class="carousel-caption">
+		      	<h3 class=text-center>Lorem ipsum dolor sit amet.</h3>
+		        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam quod aut nobis sequi. Aut hic porro facilis non vero eveniet, tempora molestiae voluptatibus dolor nemo consectetur nulla quasi cum aspernatur! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe dolorum aliquam, eius et, similique quidem dicta ipsa facere libero quaerat, at cumque placeat. Accusantium, sed!
+		      </div>
+		    </div>
+		   	<div class="item bg-cover" style="background-image:url(image/food-1440-480-9.jpg);height:300px">
+		      <div class="carousel-caption">
+		      	<h3 class=text-center>Lorem ipsum dolor sit amet.</h3>
+		        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat eum sed ratione rem quod voluptas natus nesciunt non nulla, voluptate fugiat asperiores iusto neque. Aut voluptatem nemo eaque ea architecto. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium maxime commodi mollitia, animi, veritatis minus vel beatae incidunt, quos doloribus sunt facere delectus facilis voluptatibus.
+		      </div>
+		    </div>
+		  </div>
+
+		  <!-- Controls -->
+		  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+		    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+		    <span class="sr-only">Previous</span>
+		  </a>
+		  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+		    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+		    <span class="sr-only">Next</span>
+		  </a>
+		</div>
+
+		<!-- content -->
+		<div class="container">
+			<div class="row mt10" >
+				<div class="col-md-4" style="background-color: #FFBA5E">
+					<ul style="list-style-type: none;">
+						<li><i class="fas fa-fish mr15"></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae dolorem </li>
+						<li><i class="fas fa-fish mr15"></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates numquam </li>
+						<li><i class="fas fa-fish mr15"></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit beatae cum </li>
+					</ul>
+				</div>
+				<div class="col-md-8" style="background-color: #EAC488;height: 100%">
+					<h3>Lorem ipsum dolor sit amet.</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis omnis soluta sapiente dolorum culpa ipsam incidunt beatae consequuntur consectetur perferendis voluptatem sit amet expedita numquam tempora vitae pariatur, a temporibus.</p>
+				</div>
+			</div>
+			<div class="row mt10">	
+				<div class="col-md-3 food-card">
+					<div class="text-center">
+						<img src="image/food-480-480-1.jpg" alt="" class="img-responsive img-circle img-thumbnail">
+					</div>
+					<h4 class="text-center">Lorem ipsum dolor.</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis repellat dolor aperiam nisi adipisci praesentium tenetur, at sapiente debitis nostrum atque, nam ab neque qui excepturi inventore est magni asperiores.</p>
+				</div>
+				<div class="col-md-3 food-card">
+					<div class="text-center">
+						<img src="image/food-480-480-4.jpg" alt="" class="img-responsive img-circle img-thumbnail">
+					</div>
+					<h4 class="text-center">Lorem ipsum dolor.</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo consequuntur reiciendis repellendus fugiat nam culpa, ipsum, quia praesentium ratione exercitationem sed magnam excepturi pariatur ab tenetur quisquam assumenda. Commodi, tenetur.</p>
+				</div>
+			
+				<div class="col-md-3 food-card">
+					<div class="text-center">
+						<img src="image/food-480-480-6.jpg" alt="" class="img-responsive img-circle img-thumbnail">
+					</div>
+					<h4 class="text-center">Lorem ipsum dolor.</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis repellat dolor aperiam nisi adipisci praesentium tenetur, at sapiente debitis nostrum atque, nam ab neque qui excepturi inventore est magni asperiores.</p>
+				</div>
+				<div class="col-md-3 food-card">
+					<div class="text-center">
+						<img src="image/food-480-480-9.jpg" alt="" class="img-responsive img-circle img-thumbnail">
+					</div>
+					<h4 class="text-center">Lorem ipsum dolor.</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo consequuntur reiciendis repellendus fugiat nam culpa, ipsum, quia praesentium ratione exercitationem sed magnam excepturi pariatur ab tenetur quisquam assumenda. Commodi, tenetur.</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- footer -->
+		<div style="background-color: black">
+			<h3 class="text-center" style="color: white;">Footer</h3>
+		</div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </body>
+</html>
